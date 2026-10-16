@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cadastro | Hairstyles</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="auth-page">
+    <main class="auth-shell">
+      <a class="brand" href="/index.html">Hairstyles<span>studio</span></a>
+      <div class="auth-card wide">
+        <p class="eyebrow">Primeira vez por aqui?</p>
+        <h1>Crie seu<br /><em>perfil de cuidado.</em></h1>
+        <form id="register-form">
+          <div class="form-grid">
+            <label
+              >Nome completo<input
+                name="name"
+                required
+                minlength="5"
+                maxlength="100" /></label
+            ><label
+              >E-mail<input
+                type="email"
+                name="email"
+                required
+                maxlength="120" /></label
+            ><label
+              >Telefone<input
+                name="phone"
+                required
+                pattern=".{10,}"
+                maxlength="15"
+                inputmode="tel"
+                data-mask="phone" /></label
+            ><label
+              >Data de nascimento<input
+                type="date"
+                name="birthDate"
+                required /></label
+            ><label
+              >CPF<input
+                name="cpf"
+                required
+                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                maxlength="14"
+                data-mask="cpf"
+                inputmode="numeric" /></label
+            ><label
+              >Senha<input
+                type="password"
+                name="password"
+                required
+                minlength="8" /></label
+            ><label
+              >Confirmar senha<input
+                type="password"
+                name="confirmPassword"
+                required
+                minlength="8"
+                onpaste="return false" /></label
+            ><label
+              >CEP <span class="optional">opcional</span
+              ><input
+                name="cep"
+                maxlength="9"
+                data-mask="cep"
+                inputmode="numeric" /></label
+            ><label
+              >Rua <span class="optional">opcional</span
+              ><input name="street" maxlength="120" /></label
+            ><label
+              >Número <span class="optional">opcional</span
+              ><input name="number" maxlength="10" /></label
+            ><label
+              >Complemento <span class="optional">opcional</span
+              ><input name="complement" maxlength="80" /></label
+            ><label
+              >Bairro <span class="optional">opcional</span
+              ><input name="neighborhood" maxlength="80" /></label
+            ><label
+              >Cidade <span class="optional">opcional</span
+              ><input name="city" maxlength="80" /></label
+            ><label
+              >Estado <span class="optional">opcional</span
+              ><input name="state" maxlength="2"
+            /></label>
+          </div>
+          <label class="check"
+            ><input type="checkbox" name="terms" required /> Aceito os
+            <button type="button" class="legal-link" data-policy-modal="terms">
+              Termos e condições de uso
+            </button>
+            e a
+            <button type="button" class="legal-link" data-policy-modal="privacy">
+              Política de Privacidade de Dados
+            </button>.</label
+          ><button class="button" type="submit">Criar meu cadastro</button>
+          <p class="form-feedback" role="status"></p>
+        </form>
+        <p class="auth-links"><a href="/login.html">Já tenho cadastro</a></p>
+      </div>
+    </main>
+    <div class="modal-overlay hidden" id="legal-modal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="legal-title">
+        <div class="modal-header">
+          <h2 id="legal-title">Termos e condições de uso</h2>
+          <button type="button" class="modal-close" id="legal-close" aria-label="Fechar">
+            ×
+          </button>
+        </div>
+        <div class="modal-body" id="legal-content"></div>
+      </div>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>

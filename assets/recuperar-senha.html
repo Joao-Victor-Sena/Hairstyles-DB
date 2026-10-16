@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Recuperar senha | Hairstyles</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="auth-page">
+    <main class="auth-shell">
+      <a class="brand" href="/index.html">Hairstyles<span>studio</span></a>
+      <div class="auth-card">
+        <p class="eyebrow">Recuperação de acesso</p>
+        <h1>Recupere sua<br /><em>senha.</em></h1>
+
+        <form id="recover-form">
+          <label>
+            E-mail
+            <input
+              type="email"
+              name="email"
+              required
+              maxlength="120"
+              autocomplete="email"
+            />
+          </label>
+
+          <button class="button" type="submit">Enviar link de recuperação</button>
+          <p class="form-feedback" id="recover-feedback" role="status"></p>
+        </form>
+
+        <div class="auth-links">
+          <a href="/login.html">Voltar para login</a>
+          <a href="/cadastro.html">Criar cadastro</a>
+        </div>
+      </div>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

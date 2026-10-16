@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Nova senha | Hairstyles</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="auth-page">
+    <main class="auth-shell">
+      <a class="brand" href="/index.html">Hairstyles<span>studio</span></a>
+      <div class="auth-card">
+        <p class="eyebrow">Nova senha</p>
+        <h1>Crie sua<br /><em>nova senha.</em></h1>
+
+        <form id="reset-form">
+          <label>
+            Nova senha
+            <input type="password" name="password" required minlength="8" maxlength="72" autocomplete="new-password" />
+          </label>
+          <label>
+            Confirmar nova senha
+            <input type="password" name="confirmPassword" required minlength="8" maxlength="72" autocomplete="new-password" onpaste="return false" />
+          </label>
+
+          <button class="button" type="submit">Salvar nova senha</button>
+          <p class="form-feedback" id="reset-feedback" role="status"></p>
+        </form>
+
+        <div class="auth-links">
+          <a href="/login.html">Voltar para login</a>
+          <a href="/cadastro.html">Criar cadastro</a>
+        </div>
+      </div>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

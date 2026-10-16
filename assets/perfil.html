@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Perfil | Hairstyles</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body data-page="profile">
+    <aside class="sidebar">
+      <a class="brand" href="/index.html">Hairstyles<span>studio</span></a>
+      <nav>
+        <a href="/index.html">Início</a
+        ><a href="/servicos.html">Serviços</a
+        ><a href="/historico.html">Histórico</a
+        ><a class="active" href="/perfil.html">Perfil</a>
+      </nav>
+      <small>beleza com intenção</small>
+    </aside>
+    <main class="page">
+      <header class="topbar">
+        <span>Meu perfil</span
+        ><button class="text-link" id="logout">Sair</button>
+      </header>
+      <section class="page-intro">
+        <p class="eyebrow">Seu espaço</p>
+        <h1 id="profile-name">Carregando...</h1>
+        <p class="lede" id="profile-email"></p>
+      </section>
+
+      <section class="profile-card">
+        <div class="profile-header">
+          <h2>Dados cadastrais</h2>
+        </div>
+
+        <form id="profile-form" class="profile-form">
+          <div class="form-grid">
+            <label>
+              Nome completo
+              <input name="name" minlength="5" maxlength="100" readonly disabled />
+            </label>
+            <label>
+              E-mail
+              <input type="email" name="email" maxlength="120" readonly disabled />
+            </label>
+            <label>
+              CPF
+              <input
+                name="cpf"
+                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                maxlength="14"
+                inputmode="numeric"
+                data-mask="cpf"
+                readonly
+                disabled
+              />
+            </label>
+            <label>
+              Data de nascimento
+              <input type="date" name="birthDate" required readonly disabled />
+            </label>
+            <label>
+              Telefone
+              <input
+                name="phone"
+                required
+                pattern=".{10,}"
+                maxlength="15"
+                inputmode="tel"
+                data-mask="phone"
+                readonly
+                disabled
+              />
+            </label>
+            <label>
+              CEP
+              <input
+                name="cep"
+                maxlength="9"
+                data-mask="cep"
+                inputmode="numeric"
+                readonly
+                disabled
+              />
+            </label>
+            <label>
+              Rua
+              <input name="street" maxlength="120" readonly disabled />
+            </label>
+            <label>
+              Número
+              <input name="number" maxlength="10" readonly disabled />
+            </label>
+            <label>
+              Complemento
+              <input name="complement" maxlength="80" readonly disabled />
+            </label>
+            <label>
+              Bairro
+              <input name="neighborhood" maxlength="80" readonly disabled />
+            </label>
+            <label>
+              Cidade
+              <input name="city" maxlength="80" readonly disabled />
+            </label>
+            <label>
+              Estado
+              <input name="state" maxlength="2" readonly disabled />
+            </label>
+          </div>
+
+          <p class="form-feedback" role="status"></p>
+        </form>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": null,
+  "outputDirectory": "assets",
+  "functions": {
+    "api/index.js": { "maxDuration": 15 }
+  },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index" }
+  ],
+  "redirects": [
+    { "source": "/agendamento.html", "destination": "/servicos.html", "permanent": true }
+  ]
+}

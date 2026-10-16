@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Entrar | Hairstyles</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="auth-page">
+    <main class="auth-shell">
+      <a class="brand" href="/index.html">Hairstyles<span>studio</span></a>
+      <div class="auth-card">
+        <p class="eyebrow">Bem-vinda de volta</p>
+        <h1>Entre no seu<br /><em>momento.</em></h1>
+        <form id="login-form">
+          <label
+            >E-mail<input
+              type="email"
+              name="email"
+              required
+              maxlength="120"
+              autocomplete="email" /></label
+          ><label
+            >Senha<input
+              type="password"
+              name="password"
+              required
+              minlength="8"
+              autocomplete="current-password" /></label
+          ><label class="check"
+            ><input type="checkbox" required /> Aceito os
+            <button type="button" class="legal-link" data-policy-modal="terms">
+              Termos e condições de uso
+            </button>
+            e a
+            <button type="button" class="legal-link" data-policy-modal="privacy">
+              Política de Privacidade de Dados
+            </button>.</label
+          ><button class="button" type="submit">Entrar</button>
+          <p class="form-feedback" role="status"></p>
+        </form>
+        <div class="auth-links">
+          <a href="/recuperar-senha.html">Esqueceu a senha?</a
+          ><a href="/cadastro.html">Criar cadastro</a>
+        </div>
+      </div>
+    </main>
+    <div class="modal-overlay hidden" id="legal-modal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="legal-title">
+        <div class="modal-header">
+          <h2 id="legal-title">Termos e condições de uso</h2>
+          <button type="button" class="modal-close" id="legal-close" aria-label="Fechar">
+            ×
+          </button>
+        </div>
+        <div class="modal-body" id="legal-content"></div>
+      </div>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
